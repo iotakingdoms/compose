@@ -7,6 +7,7 @@ volumes:
     driver: local
 services:
   prometheus:
+    hostname: prometheus.iotakingdoms.com
     image: prom/prometheus:latest
     container_name: prometheus
     ports:
@@ -20,6 +21,7 @@ services:
     depends_on:
       - auth
   grafana:
+    hostname: grafana.iotakingdoms.com
     image: grafana/grafana-oss:latest
     container_name: grafana
     ports:
